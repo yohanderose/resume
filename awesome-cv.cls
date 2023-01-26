@@ -161,22 +161,22 @@
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
 % \newfontfamily\FA[Path=\@fontdir]{FontAwesome}
-% Set font for header (default is Roboto)
+% Set font for header (default is Arial)
 \newfontfamily\headerfont[
   Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{Roboto}
+  UprightFont=*,
+  ItalicFont=*CEItalic,
+  BoldFont=*CEB,
+  BoldItalicFont=*CEBoldItalic,
+]{Arial}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{Roboto}
+  UprightFont=*Lgt,
+  ItalicFont=*LgtItl,
+  BoldFont=*Mdm,
+  BoldItalicFont=*MdmItl,
+]{Arial}
 
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
@@ -326,8 +326,8 @@
 \newcommand{\acvHeaderAfterNameSkip}{.4mm}
 \newcommand{\acvHeaderAfterPositionSkip}{.4mm}
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
-\newcommand{\acvHeaderIconSep}{\space}
-\newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\newcommand{\acvHeaderIconSeptember}{\space}
+\newcommand{\acvHeaderSocialSeptember}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
@@ -395,73 +395,73 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          \faPhone\acvHeaderIconSep\@mobile%
+          \faPhone\acvHeaderIconSeptember\@mobile%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{mailto:\@email}{\faEnvelopeO\acvHeaderIconSep\@email}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{mailto:\@email}{\faEnvelopeO\acvHeaderIconSeptember\@email}%
         }%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{http://\@homepage}{\faHome\acvHeaderIconSeptember\@homepage}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faGithub\acvHeaderIconSep\@github}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://github.com/\@github}{\faGithub\acvHeaderIconSeptember\@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSep\@gitlab}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSeptember\@gitlab}%
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSeptember\@stackoverflowname}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\acvHeaderIconSeptember\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSeptember\@twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \faSkype\acvHeaderIconSep\@skype%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \faSkype\acvHeaderIconSeptember\@skype%
         }%
       \ifthenelse{\isundefined{\@reddit}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.reddit.com/user/\@reddit}{\faReddit\acvHeaderIconSep\@reddit}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://www.reddit.com/user/\@reddit}{\faReddit\acvHeaderIconSeptember\@reddit}%
         }%
       \ifthenelse{\isundefined{\@xing}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
+          \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSeptember\@xing}
         }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSeptember}%
           \@extrainfo%
         }%
     } \\[\acvHeaderAfterSocialSkip]%
@@ -478,8 +478,8 @@
 % Usage: \makecvfooter{<left>}{<center>}{<right>}
 \newcommand*{\makecvfooter}[3]{%
   \fancyfoot{}
-  \fancyfoot[L]{\footerstyle{#1}}
-  \fancyfoot[C]{\footerstyle{#2}}
+  % \fancyfoot[L]{\footerstyle{#1}}
+  % \fancyfoot[C]{\footerstyle{#2}}
   \fancyfoot[R]{\footerstyle{#3}}
 }
 

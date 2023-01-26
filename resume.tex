@@ -72,7 +72,7 @@
 \setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\renewcommand{\acvHeaderSocialSeptember}{\quad\textbar\quad}
 
 \makeatletter
 \patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
@@ -85,12 +85,12 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 \photo[circle,noedge,left]{profile}
 \name{Yohan}{de Rose}
-\position{Software Developer}
+\position{}
 % \address{address}
 
-\mobile{+61 0401 378 665 / +64 027 304 5445}
+\mobile{+66 92 614 8597}
 \email{yohanderose@gmail.com}
-% \homepage{homepage}
+\homepage{https://yohanderose.dev}
 \linkedin{yohanderose}
 \github{yohanderose}
 % \stackoverflow{SO-id}{SO-name}
@@ -98,6 +98,11 @@
 % \skype{skype-id}
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup{belowskip=0pt}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -108,19 +113,23 @@
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-% \makecvfooter
-%   {\today}
-%   {Junhao Dong~~~·~~~Résumé}
-%   {\thepage}
+\makecvfooter
+  {\today}
+  {\thepage}
+  {\thepage}
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/education.tex}
 \input{resume/experience.tex}
+\input{resume/education.tex}
 \input{resume/projects.tex}
-\input{resume/skills.tex}
+
+
+%-------------------------------------------------------------------------------
+
+\input{resume/portfolio.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}
